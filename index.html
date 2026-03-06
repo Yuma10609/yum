@@ -3,49 +3,171 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yuma's Profile</title>
+<title>Yuma | Profile</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
+*{box-sizing:border-box;margin:0;padding:0}
+
 body{
-  margin:0;
-  font-family:'Segoe UI',sans-serif;
-  background:linear-gradient(135deg,#6dd5ed,#2193b0);
-  height:100vh;
+  font-family:'Poppins',sans-serif;
+  min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
+  background:linear-gradient(135deg,#667eea,#764ba2,#6dd5ed);
+  background-size:400% 400%;
+  animation:bgMove 12s ease infinite;
+}
+
+@keyframes bgMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 
 .card{
-  background:white;
+  backdrop-filter:blur(15px);
+  background:rgba(255,255,255,0.15);
+  border:1px solid rgba(255,255,255,0.3);
+  width:360px;
   padding:40px;
-  width:320px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  border-radius:25px;
   text-align:center;
+  color:white;
+  box-shadow:0 20px 40px rgba(0,0,0,0.25);
+  transition:transform .4s ease, box-shadow .4s ease;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 30px 60px rgba(0,0,0,0.35);
 }
 
 .profile-img{
-  width:120px;
-  height:120px;
+  width:130px;
+  height:130px;
   border-radius:50%;
-  background:#eee;
   margin:auto;
   margin-bottom:20px;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:40px;
+  font-weight:600;
 }
 
 h1{
-  margin:10px 0;
+  font-weight:600;
+  margin-bottom:5px;
+}
+
+.subtitle{
+  opacity:0.8;
+  font-size:14px;
+  margin-bottom:20px;
 }
 
 .bio{
-  color:#555;
   font-size:14px;
+  line-height:1.6;
+  opacity:0.95;
+}
+
+.skills{
+  margin-top:25px;
+}
+
+.skill{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:20px;
+  margin:4px;
+  font-size:12px;
+  background:rgba(255,255,255,0.25);
 }
 
 .socials{
-  margin-top:20px;
+  margin-top:25px;
 }
 
 .socials a{
+  display:inline-block;
+  margin:8px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.25);
   text-decoration:none;
-  margin:
+  color:white;
+  font-size:18px;
+  transition:transform .3s, background .3s;
+}
+
+.socials a:hover{
+  transform:scale(1.2);
+  background:rgba(255,255,255,0.45);
+}
+
+button{
+  margin-top:25px;
+  padding:12px 24px;
+  border:none;
+  border-radius:30px;
+  font-weight:600;
+  cursor:pointer;
+  color:#333;
+  background:white;
+  transition:transform .3s, box-shadow .3s;
+}
+
+button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.25);
+}
+
+.footer{
+  margin-top:20px;
+  font-size:12px;
+  opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="profile-img">Y</div>
+
+<h1>ゆま</h1>
+<div class="subtitle">Creative Student</div>
+
+<p class="bio">
+こんにちは！ゆまです ✨<br>
+音楽・イラスト・ゲームが好きです。<br>
+楽しいことやクリエイティブなことに挑戦しています！
+</p>
+
+<div class="skills">
+<span class="skill">🎨 イラスト</span>
+<span class="skill">🎮 ゲーム</span>
+<span class="skill">🎵 音楽</span>
+<span class="skill">💻 Web</span>
+</div>
+
+<div class="socials">
+<a href="#">🐦</a>
+<a href="#">📷</a>
+<a href="#">🌐</a>
+</div>
+
+<button onclick="alert('ゆまのページへようこそ！')">Message</button>
+
+<div class="footer">© Yuma</div>
+
+</div>
+
+</body>
+</html>
